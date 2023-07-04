@@ -1,0 +1,36 @@
+openapi: 3.0.1
+info:
+  title: Translate Plugin
+  description: A plugin that allows the user to translate input text".
+  version: 'v1'
+servers:
+  - url: http://localhost:5003
+paths:
+  /translate:
+    post:
+      operationId: translate
+      summary: Translates an input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input'
+      responses:
+        "200":
+          description: OK
+
+components:
+  schemas:
+    input:
+      type: object
+      properties:
+        from:
+          type: string
+          description: from language.
+        to:
+          type: string
+          description: to language.
+        input:
+          type: string
+          description: input text content.
