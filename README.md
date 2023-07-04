@@ -1,6 +1,6 @@
-# ChatGPT CMD Plugin In NodeJs
+# ChatGPT Translate Plugin In NodeJs
 
-This template repository will help you bootstrap your ChatGPT plugin development in NodeJs / Typescript. It provides a simple example of a CMD plugin for ChatGPT. The plugin allows users to interact with the windows command line interface.
+This template repository will help you bootstrap your ChatGPT plugin development in NodeJs / Typescript. It provides a simple example of a translation plugin for ChatGPT. The plugin allows users to interact with the windows command line interface.
 
 If you do not already have plugin developer access, please [join the waitlist](https://openai.com/waitlist/plugins). This is similar to the python sample from OpenAI 
 
@@ -10,7 +10,7 @@ I would also suggest you to read the [plugin documentation from OpenAI](https://
 
 ## Features
 
-- Interact with cmd
+- Trnaslate any language
 
 ## Getting Started
 
@@ -24,8 +24,8 @@ I would also suggest you to read the [plugin documentation from OpenAI](https://
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/kokilack611/chatgpt-plugin-cmd.git
-cd chatgpt-plugin-cmd
+git clone https://github.com/kokilack611/chatgpt-plugin-trnaslate.git
+cd chatgpt-plugin-trnaslate
 ```
 
 2. Install the required dependencies:
@@ -56,24 +56,12 @@ The plugin should now be installed and enabled! You can start with a question li
 
 ## API Endpoints
 
-### Spawn a cmd
+### translate
 
-- URL: `/spawn`
+- URL: `/translate`
 - Method: `POST`
+- Body: `{from, to, input}`
 - Success Response: `200 OK` 
-
-### Run a command
-
-- URL: `/run`
-- Method: `POST`
-- Body: `{command}`
-- Success Response: `200 OK` 
-
-### Exit the shell
-
-- URL: `/exit`
-- Method: `POST`
-- Success Response: `200 OK`
 
 ## Contributing
 
